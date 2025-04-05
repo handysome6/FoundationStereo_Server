@@ -1,0 +1,34 @@
+# torch==2.4.1
+# torchvision==0.19.1
+# torchaudio==2.4.1
+# xformers==0.0.28.post1
+
+scikit-image
+omegaconf==2.3.0
+opencv-contrib-python
+imgaug
+ninja
+timm
+albumentations
+jupyterlab
+scipy
+joblib
+scikit-learn
+ruamel.yaml
+trimesh
+pyyaml
+imageio>=2.31.0
+open3d>=0.17.0
+transformations
+einops
+gdown
+flash-attn
+nodejs
+
+# Usage: python scripts/run_demo.py --left_file ./test_img/rectify_01_left.jpg --right_file ./test_img/rectify_01_right.jpg --ckpt_dir ./pretrained_models/23-51-11/model_best_bp2.pth --out_dir ./test_outputs/
+
+fastapi==0.104.1
+python-multipart==0.0.6
+uvicorn==0.24.0
+numpy>=1.24.0
+opencv-python>=4.8.0

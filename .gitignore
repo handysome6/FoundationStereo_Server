@@ -1,6 +1,8 @@
 pretrained_models/*
-output/*
+output/
 *.pyc
 weight/
 __pycache__
 DATA/*
+test_output/
+pcd_outputs/

@@ -139,3 +139,12 @@ def depth_uint8_decoding(depth_uint8, scale=1000):
   out = depth_uint8[...,0]*255*255 + depth_uint8[...,1]*255 + depth_uint8[...,2]
   return out/float(scale)
 
+def timeit(func):
+  from loguru import logger
+  def wrapper(*args, **kwargs):
+    start_time = time.time()
+    result = func(*args, **kwargs)
+    end_time = time.time()
+    logger.info(f"{func.__name__} 执行时间: {end_time - start_time} 秒\n")
+    return result
+  return wrapper
