@@ -23,7 +23,7 @@ docker build -t stereo_pcd_server .
 
 4. Docker run
 ```
-docker run --gpus '"device=7"' -p 2000:2000 andy_stereo_pcd_server
+docker run --gpus '"device=7"' -p 2000:2000 stereo_pcd_server
 ```
 
 ## 安装
