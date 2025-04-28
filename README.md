@@ -6,6 +6,26 @@
 
 - 从[这里](https://drive.google.com/drive/folders/1VhPebc_mMxWKccrv7pdQLTvXYVcLYpsf?usp=sharing)下载基础模型用于零样本推理。将整个文件夹（例如 `23-51-11`）放在 `./pretrained_models/` 目录下。
 
+## Docker Installation (only below RTX 5000 GPU)
+
+1. 克隆仓库：
+```bash
+git clone <repository_url>
+cd FoundationStereo_Server
+```
+
+2. Download pretrained model and put it under `pretrained_models/23-51-11/model_best_bp2.pth`
+
+3. Docker build
+```
+docker build -t stereo_pcd_server .
+```
+
+4. Docker run
+```
+docker run --gpus '"device=7"' -p 2000:2000 andy_stereo_pcd_server
+```
+
 ## 安装
 
 1. 克隆仓库：
