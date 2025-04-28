@@ -1,0 +1,23 @@
+[Unit]
+Description=FoundationStereo_Server
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=omen
+Group=omen
+WorkingDirectory=/home/omen/workspace/FoundationStereo_Server
+ExecStart=/home/omen/miniforge3/envs/py312/bin/python /home/omen/workspace/FoundationStereo_Server/stereo_server.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Hardening
+# ProtectSystem=full
+# NoNewPrivileges=yes
+# PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

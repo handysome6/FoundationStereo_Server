@@ -42,8 +42,8 @@ stereo_service = None
 async def startup_event():
     global stereo_service
     # 加载配置文件
-    config_path = "server_config.yaml"
-    if not os.path.exists(config_path):
+    config_path = Path(__file__).parent / "server_config.yaml"
+    if not config_path.exists():
         raise RuntimeError(f"配置文件 {config_path} 不存在")
     stereo_service = StereoService(config_path=config_path)
     # 预热模型
